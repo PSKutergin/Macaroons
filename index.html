@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macaroons</title>
-    <link rel="stylesheet/less" href="./src/styles/style.less">
-    <link rel="stylesheet/less" href="./src/styles/adaptive.less">
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <link rel="stylesheet" href="./dist/styles/style.min.css">
+    <script src="./dist/js/main.js" defer></script>
 </head>
 
 <body>
@@ -189,7 +188,7 @@
             <section class="order-image">
                 <img src="assets/image/macarons.png" alt="Macaroons">
             </section>
-            <section class="order-form">
+            <form class="order-form">
                 <h1 class="order-form-title">Закажите макарун!</h1>
                 <section class="order-form-text">
                     Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
@@ -203,10 +202,10 @@
                         <h3 class="order-form-item-title">Заполните данные для заказа</h3>
                         <input type="text" placeholder="Ваше имя">
                         <input type="text" placeholder="+375 (__) ___ - __ - __">
-                        <button class="button order-form-btn">Оформить заказ</button>
+                        <button type="button" class="button order-form-btn">Оформить заказ</button>
                     </section>
                 </section>
-            </section>
+            </form>
             <section class="strawberry1">
                 <img src="assets/image/strawberry1.png" alt="strawberry1">
             </section>
@@ -247,18 +246,6 @@
             Оформите заказ <span>и получите подарок!</span>
         </section>
     </section>
-
-    <script>
-        document.getElementById('burger').onclick = function () {
-            document.getElementById('menu').classList.add('open');
-        }
-
-        document.querySelectorAll('#menu *').forEach((item) => {
-            item.onclick = () => {
-                document.getElementById('menu').classList.remove('open')
-            }
-        })
-    </script>
 
 </body>
 
