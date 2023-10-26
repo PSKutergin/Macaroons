@@ -196,16 +196,22 @@
                 <section class="order-form-items">
                     <section class="order-form-item">
                         <h3 class="order-form-item-title">Ваш выбор</h3>
-                        <input type="text" placeholder="Напишите, что хотите заказать...">
+                        <input id="product" type="text" placeholder="Напишите, что хотите заказать...">
+                        <p class="error-input">Необходимо ввести заказ</p>
                     </section>
                     <section class="order-form-item">
                         <h3 class="order-form-item-title">Заполните данные для заказа</h3>
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="text" placeholder="+375 (__) ___ - __ - __">
+                        <input id="name" type="text" placeholder="Ваше имя">
+                        <p class="error-input">Необходимо ввести имя</p>
+                        <input id="phone" type="text" placeholder="+375 (__) ___ - __ - __">
+                        <p class="error-input">Необходимо ввести номер телефона</p>
                         <button type="button" class="button order-form-btn">Оформить заказ</button>
                     </section>
                 </section>
             </form>
+            <section class="order-card">
+                <p>Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</p>
+            </section>
             <section class="strawberry1">
                 <img src="assets/image/strawberry1.png" alt="strawberry1">
             </section>
@@ -245,6 +251,23 @@
         <section class="speech">
             Оформите заказ <span>и получите подарок!</span>
         </section>
+    </section>
+
+    <section class="loader">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
 
 </body>

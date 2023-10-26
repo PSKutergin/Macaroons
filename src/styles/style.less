@@ -409,7 +409,7 @@
             }
 
             .order-form-item {
-                margin-top: 25px;
+                margin-top: 20px;
                 display: flex;
                 flex-direction: column;
 
@@ -421,7 +421,7 @@
                 }
 
                 input {
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
                     padding: 0 26px;
                     background: transparent;
                     border: 1px solid #821328;
@@ -437,6 +437,19 @@
                     &::placeholder {
                         color: @text-color3;
                     }
+
+                    &.error {
+                        border: 2px solid red;
+                    }
+                }
+                
+                .error-input {
+                    font-size: 14px;
+                    font-family: GilroyBold, sans-serif;
+                    color: red;
+                    margin-left: 30px;
+                    margin-bottom: 5px;
+                    display: none;
                 }
             }
 
@@ -445,6 +458,22 @@
                 height: 60px;
                 border-radius: 30px;
                 font-size: 18px;
+            }
+        }
+
+        .order-card {
+            max-width: 425px;
+            height: 545px;
+            margin-left: 162px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 45px;
+                font-family: Tavolga, sans-serif;
+                color: @text-color2;
+                text-align: center;
             }
         }
 
@@ -579,6 +608,114 @@
         .speech {
             transform: translate(0, 0);
         }
+    }
+}
+
+.loader {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.624);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .lds-spinner {
+        color: official;
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        div {
+            transform-origin: 40px 40px;
+            animation: lds-spinner 1.2s linear infinite;
+
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 37px;
+                width: 6px;
+                height: 18px;
+                border-radius: 20%;
+                background: @theme-color2;
+              }
+
+            &:nth-child(1) {
+                transform: rotate(0deg);
+                animation-delay: -1.1s;
+            }
+            
+            &:nth-child(2) {
+                transform: rotate(30deg);
+                animation-delay: -1s;
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(60deg);
+                animation-delay: -0.9s;
+            }
+            
+            &:nth-child(4) {
+                transform: rotate(90deg);
+                animation-delay: -0.8s;
+            }
+            
+            &:nth-child(5) {
+                transform: rotate(120deg);
+                animation-delay: -0.7s;
+            }
+            
+            &:nth-child(6) {
+                transform: rotate(150deg);
+                animation-delay: -0.6s;
+            }
+            
+            &:nth-child(7) {
+                transform: rotate(180deg);
+                animation-delay: -0.5s;
+            }
+            
+            &:nth-child(8) {
+                transform: rotate(210deg);
+                animation-delay: -0.4s;
+            }
+            
+            &:nth-child(9) {
+                transform: rotate(240deg);
+                animation-delay: -0.3s;
+            }
+            
+            &:nth-child(10) {
+                transform: rotate(270deg);
+                animation-delay: -0.2s;
+            }
+            
+            &:nth-child(11) {
+                transform: rotate(300deg);
+                animation-delay: -0.1s;
+            }
+            
+            &:nth-child(12) {
+                transform: rotate(330deg);
+                animation-delay: 0s;
+            }
+        }
+    }
+}
+
+
+@keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
 }
 
